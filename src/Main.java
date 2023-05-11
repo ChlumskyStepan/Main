@@ -19,9 +19,12 @@ public class Main {
     }
 
     public static void ukol5() {
-        double cena = 0; // Nastavíme do proměnné hodnotu 0 // Desetkrát přičteme hodnotu jedna desetina (0,1):
+
+        //* Místo proměnné double jsem použil BigDecimal pro vypsání 1.0 */
+
+        BigDecimal cena = BigDecimal.valueOf(0); // Nastavíme do proměnné hodnotu 0 // Desetkrát přičteme hodnotu jedna desetina (0,1):
         for (int i = 1; i <= 10; i++) { //*Doplněný = do i < 10 a místo i = 0  je i = 1*
-            cena += 0.1;
+            cena = cena.add(BigDecimal.valueOf(0.1));
                // operátor "+=" znamená: přičti ke stávající hodnotě navíc 0.1
         }
         System.out.println(cena);
